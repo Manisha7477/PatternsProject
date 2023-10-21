@@ -1,0 +1,23 @@
+package com.kodnest.patternconcept;
+import java.util.Scanner;
+public class PallindromeCheckQ3 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int num = scan.nextInt();
+		int reverse=0;
+		int temp = num;
+		while(temp>0) {
+			
+			reverse =reverse*10+(temp%10);
+			temp = temp/10;
+		}
+		if(num==reverse) {
+			System.out.println(num+": Number is pallindrome");
+		}
+		else {
+			System.out.println(num+": Number is not pallindrome");
+		}
+	}
+
+}
