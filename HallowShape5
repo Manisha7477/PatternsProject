@@ -1,0 +1,61 @@
+package com.kodnest.patternconcept;
+import java.util.Scanner;
+public class Solution27 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number of rows: ");
+		int n = sc.nextInt();
+		// when n is an even value
+		if(n%2 == 0) {
+			for (int i = 1; i <= n; i++) {
+				if(n%2==0 && i==n) {
+					for (int j = 2; j <= i*2; j=j+2) {
+						System.out.print(j);
+						if(j<i*2)
+							System.out.print(",");
+					}
+					for (int j = i*2 - 2; j >= 2; j=j-2) {
+						if(j>=2)
+							System.out.print(",");
+						System.out.print(j+"");
+					}
+				}
+
+				else {
+					for (int j = 1; j <= n - i; j++) {
+						System.out.print("  ");
+					}
+					for (int j = 1; j <= i; j++) {
+						System.out.print(j);
+						if(j<i)
+							System.out.print(",");
+					}
+					for (int j = i - 1; j >= 1; j--) {
+						if(j>=1)
+							System.out.print(",");
+						System.out.print(j);
+					}
+				}
+				System.out.println();
+			}
+
+			// printing lower part
+			for (int i = n - 1; i >= 1; i--) {
+				for (int j = 1; j <= n - i; j++) {
+					System.out.print("  ");
+				}
+				for (int j = 1; j <= i; j++) {
+					System.out.print(j);
+					if(j<i)
+						System.out.print(",");
+				}
+				for (int j = i - 1; j >= 1; j--) {
+					if(j>=1)
+						System.out.print(",");
+					System.out.print(j);
+				}
+				System.out.println();
+			}
+		}
+	}
+}
