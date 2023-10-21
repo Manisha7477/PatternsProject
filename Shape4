@@ -1,0 +1,24 @@
+package com.kodnest.patternconcept;
+
+public class Solution10S {
+	public static void main(String[] args) {
+		//int heigh=10;
+		int i, j; 
+	    for (i = 0; i < 10; i++) 
+	    { 
+	        for (j = 0; j < 10; j++)  
+	        { 
+	            if ((i == 0 || i == 10 / 2 || i == 10 - 1)) 
+	                System.out.printf("*"); 
+	            else if (i < 10 / 2 && j == 0) 
+	                System.out.printf("*"); 
+	            else if (i > 10 / 2 && j == 10 - 1) 
+	                System.out.printf("*"); 
+	            else
+	                System.out.print(" "); 
+	        } 
+	        System.out.println(); 
+	}
+	}
+
+}
